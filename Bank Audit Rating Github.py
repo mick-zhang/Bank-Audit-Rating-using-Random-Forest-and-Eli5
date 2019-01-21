@@ -343,7 +343,7 @@ for performance_analysis in (grid_search.best_score_,
 
 
 # In our performance analysis, we see the following:
-# - Best Mean Score: 98.04& which is very close to our accuracy level of 97.09%
+# - Best Mean Score: 98.04% which is very close to our accuracy level of 97.09%
 # - Best Estimator: shown above
 # - Best Parameter: shows "250 n_estimators", "auto max_features", and "bootstrap false"
 
