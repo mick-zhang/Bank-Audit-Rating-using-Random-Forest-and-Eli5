@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # 1 Framing the Problem
+# # 1 Business Problem
 
 # One of the major reason why the Canadian banking system continues to thrive despite constant changes in financial innovations and technological integrations are due to the impact of OSFI's (Office of the Superintendent of Financial Institutions) stringent rules and regulations.
 # 
@@ -137,7 +137,7 @@ print(strat_test["Decision"].value_counts()/len(strat_test))
 
 # We have successfully split the data into 80% training data and 20% testing data. As shown in the bar graphs above, both training set and testing set were split evenly, instead of splitting it right down the middle.
 
-# # Modeling
+# # 4 Modeling
 
 # ## 4.1 Set Target Variable
 
@@ -330,7 +330,7 @@ np.mean(predictedFinal == X_test_targetSentiment)
 # - We also see that the final model has an accuracy level of **97.09%**, which is slightly lower than our pre-fine-tuned model at 99.03% accuracy level
 # - The 1.94% difference shows that the fine-tuning was able to capture some over-fitting and ensure that the model is able to learn the entire department's decision making approach, as well as each individual banker's unique decision making approach
 
-# # Detailed Analysis
+# # 5 Detailed Analysis
 
 # In[18]:
 
@@ -381,7 +381,7 @@ metrics.confusion_matrix(X_test_targetSentiment, predictedFinal)
 # 
 # Therefore, we conclude that our model is able to learn and understand a Bank's decision making approach, for a certain product of a department, to avoid errors that Auditors can potentially make 20% of the time.
 
-# # Text Visualization with Eli5
+# # 6 Text Visualization with Eli5
 
 # Now that we have completed our model, we can also to take a step further by identifying the keywords that were used in our matrix for our Audit Rating System.
 # 
@@ -459,7 +459,7 @@ eli5.show_weights(final_model, vec=tfidf_vec, top=3)
 # 
 # For privacy protection, we will only display keywords in 1-gram for the top 3 result.
 
-# # Answering the Questions
+# # 7 Answering the Questions
 
 # From the analysis above on the classification report, we see that the model is able to perform as an "Internal Audit System" for understanding the department's decision making approach on Client approvals and denials. With this knowledge, we can use our model to avoid the 20% errors that Auditors can potentially make in bias errors and opinion errors.
 # 
